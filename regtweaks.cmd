@@ -329,7 +329,7 @@ ECHO.
 :odrivestart
 set /p onedrive="Disable OneDrive? y/n: "
 if '%onedrive%' == 'n' goto hoststart2
-if /i "%registry%" equ "y" ( GOTO odrivestart0 ) else ( GOTO hoststart2 )
+if /i "%onedrive%" equ "y" ( GOTO odrivestart0 ) else ( GOTO hoststart2 )
 :odrivestart0
 reg add "HKLM\Software\Policies\Microsoft\Windows\OneDrive" /v DisableFileSyncNGSC /t REG_DWORD /d 1 /f > NUL 2>&1
 ECHO Done...
@@ -343,7 +343,7 @@ ECHO.
 :hoststart
 set /p hostsblock="Blocking Telemetry Servers (Data Reporting) ? y/n: "
 if '%hostsblock%' == 'n' goto EXIT
-if /i "%registry%" equ "y" ( GOTO hoststart0 ) else ( GOTO EXIT )
+if /i "%hostsblock%" equ "y" ( GOTO hoststart0 ) else ( GOTO EXIT )
 :hoststart0
 copy "%WINDIR%\system32\drivers\etc\hosts" "%WINDIR%\system32\drivers\etc\hosts.bak" > NUL 2>&1
 attrib -r "%WINDIR%\system32\drivers\etc\hosts" > NUL 2>&1
