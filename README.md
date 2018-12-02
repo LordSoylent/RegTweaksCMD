@@ -16,6 +16,8 @@ mining, or just basic Windows Installs.
 
 ## Huge Thanks to Private-Locker Community!
 Required OS : Windows 7 - Windows 10
+
+
 Uses: 
 
     Batch (CMD), Registry, PowerShell
