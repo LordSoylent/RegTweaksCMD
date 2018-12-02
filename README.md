@@ -1,5 +1,4 @@
-
- RegTweaksCMD
+# RegTweaksCMD
 
     You will get to choose prompt style on your Options,
     there is multiple groups of tweaks in this code.
@@ -11,8 +10,7 @@
      -Remove Telementry(Data Reporting) Serivces
 
 ## Huge Thanks to Private-Locker Community!
-Required OS : Windows
-Required Version: Windows 7 - Windows 10
+Required OS : Windows 7 - Windows 10
 Uses: 
 
     Batch (CMD), Registry, PowerShell
