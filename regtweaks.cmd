@@ -107,7 +107,7 @@ GOTO START2
 :rem1
 echo Testing
 pause
-GOTO EXIT
+GOTO REGTWEAK
 
 :START
 echo ==========================================================
