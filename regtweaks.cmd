@@ -90,10 +90,12 @@ set /p option="Select a Option[0-2] and Press ENTER to contine: "
 if "%option%" EQU "1" GOTO START
 if "%option%" EQU "2" GOTO START2 
 if "%option%" EQU "0" GOTO EXIT
-GOTO REGTWEAK
 cls
+GOTO REGTWEAK
+
 
 :START2
+cls
 echo ==========================================================
 echo ================ Mining Registry Tweaks ==================
 echo ==========================================================
@@ -110,6 +112,7 @@ pause
 GOTO REGTWEAK
 
 :START
+cls
 echo ==========================================================
 echo ================ Mining Registry Tweaks ==================
 echo ==========================================================
