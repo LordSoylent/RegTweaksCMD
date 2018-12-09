@@ -60,7 +60,7 @@ cd /d %~dp0
 if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 GOTO CONSENT
 :REGTWEAK
-mode con:cols=61 lines=25
+mode con:cols=60 lines=25
 echo O----------------------------------------------------------O
 echo ^| Welcome to Private-Locker's Windows Tweaks for improving ^|
 echo ^| mining and overall experience on Windows Machines.       ^|
@@ -96,9 +96,9 @@ GOTO REGTWEAK
 
 :START2
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -133,9 +133,9 @@ GOTO REGTWEAK
 
 :START
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -163,9 +163,9 @@ if /i "%registry%" equ "y" ( GOTO reg0start ) else ( GOTO servstart2 )
 
 :reg0start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -194,9 +194,9 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution 
 
 :reg2start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -225,9 +225,9 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcon
 
 :reg3start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -256,9 +256,9 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "H
 
 :reg4start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -287,9 +287,9 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScr
 
 :reg5start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -318,9 +318,9 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "F
 
 :reg6start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -349,9 +349,9 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 
 :reg7start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -381,9 +381,9 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Con
 
 :reg8start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -414,9 +414,9 @@ reg delete "HKEY_CLASSES_ROOT\mscfile\shellex\ContextMenuHandlers\PintoStartScre
 
 :reg9start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -445,9 +445,9 @@ reg add "HKCU\Control Panel\Desktop\WindowMetrics" /v "IconVerticalSpacing" /t R
 
 :reg10start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -476,9 +476,9 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v NoPreviousV
 
 :reg12start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -517,9 +517,9 @@ reg add "HKLM\COMPONENTS\DerivedData\Components\amd64_microsoft-windows-c..lemet
 
 :reg13start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -559,9 +559,9 @@ reg add "HKCU\Software\Policies\Microsoft\Internet Explorer\Main" /v "RunOnceCom
 
 :reg14start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -594,9 +594,9 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEn
 
 :reg15start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -625,9 +625,9 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "DisableLogonBackgr
 
 :reg16start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -656,9 +656,9 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting" /v "D
 
 :reg17start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -687,9 +687,9 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Updat
 
 :reg18start
 cls
-echo ==========================================================
-echo ================ Mining Registry Tweaks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Mining Registry Tweaks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -722,9 +722,9 @@ goto servstart2
 
 :servstart2
 cls
-echo ==========================================================
-echo ============ Tweaks for Services and Tasks ===============
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|             Tweaks for Services and Tasks                ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -753,9 +753,9 @@ if /i "%services%" equ "y" ( GOTO serv0start ) else ( GOTO schedstart2 )
 
 :serv0start
 cls
-echo ==========================================================
-echo ============ Tweaks for Services and Tasks ===============
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|             Tweaks for Services and Tasks                ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -787,9 +787,9 @@ sc config WMPNetworkSvc start= disabled > NUL 2>&1
 
 :serv1start
 cls
-echo ==========================================================
-echo ============ Tweaks for Services and Tasks ===============
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|             Tweaks for Services and Tasks                ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -818,9 +818,9 @@ sc config dmwappushservice start= disabled > NUL 2>&1
 
 :serv2start
 cls
-echo ==========================================================
-echo ============ Tweaks for Services and Tasks ===============
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|             Tweaks for Services and Tasks                ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -850,9 +850,9 @@ del "C:\ProgramData\Microsoft\Search\Data\Applications\Windows\Windows.edb" /s >
 
 :serv3start
 cls
-echo ==========================================================
-echo ============ Tweaks for Services and Tasks ===============
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|             Tweaks for Services and Tasks                ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -881,9 +881,9 @@ sc config SysMain start= disabled > NUL 2>&1
 
 :serv4start
 cls
-echo ==========================================================
-echo ============ Tweaks for Services and Tasks ===============
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|             Tweaks for Services and Tasks                ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -923,9 +923,9 @@ goto schedstart2
 
 :schedstart2
 cls
-echo ==========================================================
-echo ================ Remove Scheduled Tasks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Remove Scheduled Tasks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -953,9 +953,9 @@ if '%schedules%' == 'n' goto winappstart2
 if /i "%schedules%" equ "y" ( GOTO schedstart0 ) else ( GOTO winappstart2 )
 :schedstart0
 cls
-echo ==========================================================
-echo ================ Remove Scheduled Tasks ==================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|                 Remove Scheduled Tasks                   ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -990,9 +990,9 @@ timeout /t 2 /NOBREAK >NUL
 
 :winappstart2
 cls
-echo ==========================================================
-echo ============== Remove Windows Default Apps ===============
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|               Remove Windows Default Apps                ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -1020,9 +1020,9 @@ if '%winapps%' == 'n' goto odrivestart2
 if /i "%winapps%" equ "y" ( GOTO winappstart0 ) else ( GOTO odrivestart2 )
 :winappstart0
 cls
-echo ==========================================================
-echo ============== Remove Windows Default Apps ===============
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|               Remove Windows Default Apps                ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -1060,9 +1060,9 @@ ECHO Done...
 timeout /t 2 /NOBREAK >NUL
 :odrivestart2
 cls
-echo ==========================================================
-echo ============== Disable / Remove OneDrive =================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|               Disable / Remove OneDrive                  ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -1090,9 +1090,9 @@ if '%onedrive%' == 'n' goto hoststart2
 if /i "%onedrive%" equ "y" ( GOTO odrivestart0 ) else ( GOTO hoststart2 )
 :odrivestart0
 cls
-echo ==========================================================
-echo ============== Disable / Remove OneDrive =================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|               Disable / Remove OneDrive                  ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
@@ -1119,9 +1119,9 @@ ECHO Done...
 timeout /t 2 /NOBREAK >NUL
 :hoststart2
 cls
-echo ==========================================================
-echo ============= Blocking Telemetry Servers =================
-echo ==========================================================
+echo O----------------------------------------------------------O
+echo ^|              Blocking Telemetry Servers                  ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
 echo.
