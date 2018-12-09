@@ -374,8 +374,8 @@ echo ==========================================================
 ECHO.
 :hoststart
 set /p hostsblock="Blocking Telemetry Servers (Data Reporting) ? y/n: "
-if '%hostsblock%' == 'n' goto EXIT
-if /i "%hostsblock%" equ "y" ( GOTO hoststart0 ) else ( GOTO EXIT )
+if '%hostsblock%' == 'n' goto REGTWEAK
+if /i "%hostsblock%" equ "y" ( GOTO hoststart0 ) else ( GOTO REGTWEAK )
 :hoststart0
 copy "%WINDIR%\system32\drivers\etc\hosts" "%WINDIR%\system32\drivers\etc\hosts.bak" > NUL 2>&1
 attrib -r "%WINDIR%\system32\drivers\etc\hosts" > NUL 2>&1
