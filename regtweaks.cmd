@@ -62,10 +62,11 @@ GOTO CONSENT
 :REGTWEAK
 mode con:cols=60 lines=25
 echo ==========================================================
-echo Welcome to REDD's Mining/Windows Tweaks for Mining.
+echo  Welcome to Private-Locker's Windows Tweaks for improving
+echo  mining and overall experience on Windows Machines.
 echo.
-echo You will get to choose prompt style on your Options,
-echo there is multiple groups of tweaks in this code.
+echo  You will get to choose prompt style on your Options,
+echo  there is multiple groups of tweaks in this code.
 echo.
 echo  -Registry Mining Tweaks
 echo  -Registry Running Services Tweaks
@@ -74,6 +75,17 @@ echo  -Remove Windows Bloatware (Xbox, Zune, 3d editors, etc)
 echo  -Remove Telementry(Data Reporting) Serivces
 echo ==========================================================
 echo.
+echo.
+echo 1. Add Registry Tweaks
+echo 2. Remove Registry Tweaks
+echo.
+echo.
+echo.
+echo 0. Exit
+echo.
+echo.
+echo.
+
 set /p option="Select a Option[0-2] and Press ENTER to contine: "
 SET "NOT=1,2,0"
 IF "%option%" NEQ "%NOT%" GOTO REGTWEAK
