@@ -74,10 +74,32 @@ echo  -Remove Windows Bloatware (Xbox, Zune, 3d editors, etc)
 echo  -Remove Telementry(Data Reporting) Serivces
 echo ==========================================================
 echo.
-echo.
-echo Hit Enter to Continue...
-pause>NUL
+set /p option="Select a Option[0-2] and Press ENTER to contine: "
+SET "NOT=1,2,0"
+IF "%option%" NEQ "%NOT%" GOTO REGTWEAK
+if "%option%" EQU "1" goto START
+if "%option%" EQU "2" goto START2
+if "%option%" EQU "0" GOTO EXIT
 cls
+
+:START2
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+ECHO.
+set /p removal="You sure you want to remove Our Registry Tweaks? y/n: "
+SET "NOT=Y, y, N, n"
+IF "%removal%" NEQ "%NOT%" GOTO START2
+if "%removal%" EQU "n" goto EXIT
+if "%removal%" EQU "N" goto EXIT
+if "%removal%" EQU "y" GOTO reg0start
+if "%removal%" EQU "Y" GOTO reg0start
+
+:rem1
+echo Testing
+pause
+GOTO EXIT
+
 :START
 echo ==========================================================
 echo ================ Mining Registry Tweaks ==================
