@@ -60,28 +60,28 @@ cd /d %~dp0
 if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 GOTO CONSENT
 :REGTWEAK
-mode con:cols=60 lines=25
-echo ==========================================================
-echo  Welcome to Private-Locker's Windows Tweaks for improving
-echo  mining and overall experience on Windows Machines.
-echo.
-echo  You will get to choose prompt style on your Options,
-echo  there is multiple groups of tweaks in this code.
-echo.
-echo  -Registry Mining Tweaks
-echo  -Registry Running Services Tweaks
-echo  -Schedule Task Tweaks
-echo  -Remove Windows Bloatware (Xbox, Zune, 3d editors, etc)
-echo  -Remove Telementry(Data Reporting) Serivces
-echo ==========================================================
-echo.
-echo.
-echo 1. Add Registry Tweaks
-echo 2. Remove Registry Tweaks
+mode con:cols=61 lines=25
+echo O----------------------------------------------------------O
+echo ^| Welcome to Private-Locker's Windows Tweaks for improving ^|
+echo ^| mining and overall experience on Windows Machines.       ^|
+echo ^|                                                          ^|
+echo ^| You will get to choose prompt style on your Options,     ^|
+echo ^| there is multiple groups of tweaks in this code.         ^|
+echo ^|                                                          ^|
+echo ^| -Registry Mining Tweaks                                  ^|
+echo ^| -Registry Running Services Tweaks                        ^|
+echo ^| -Schedule Task Tweaks                                    ^|
+echo ^| -Remove Windows Bloatware (Xbox, Zune, 3d editors, etc)  ^|
+echo ^| -Remove Telementry(Data Reporting) Serivces              ^|
+echo O----------------------------------------------------------O
 echo.
 echo.
+echo    1. Add Registry Tweaks
+echo    2. Remove Registry Tweaks
 echo.
-echo 0. Exit
+echo.
+echo.
+echo    0. Exit
 echo.
 echo.
 echo.
@@ -99,7 +99,27 @@ cls
 echo ==========================================================
 echo ================ Mining Registry Tweaks ==================
 echo ==========================================================
-ECHO.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p removal="You sure you want to remove Our Registry Tweaks? y/n: "
 if "%removal%" EQU "n" goto REGTWEAK
 if "%removal%" EQU "N" goto REGTWEAK
@@ -116,13 +136,57 @@ cls
 echo ==========================================================
 echo ================ Mining Registry Tweaks ==================
 echo ==========================================================
-ECHO.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p registry="You sure you want to apply Our Registry Tweaks? y/n: "
 if '%registry%' == 'n' goto servstart2
 if /i "%registry%" equ "y" ( GOTO reg0start ) else ( GOTO servstart2 )
 
 :reg0start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg0="Replace Utilman with CMD? (Backdoor for if Locked Out) y/n: "
 if '%reg0%' == 'n' goto reg2start
 if /i "%reg0%" neq "y" goto reg0start
@@ -130,6 +194,30 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution 
 
 :reg2start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg2="Show Computer shortcut on Desktop? y/n: "
 if '%reg2%' == 'n' goto reg3start
 if /i "%reg2%" neq "y" goto reg2start
@@ -137,6 +225,30 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcon
 
 :reg3start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg3="Show File Extensions? (.txt, .jpg, etc) y/n: "
 if '%reg3%' == 'n' goto reg4start
 if /i "%reg3%" neq "y" goto reg3start
@@ -144,6 +256,30 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "H
 
 :reg4start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg4="Disable Windows Lockscreen? y/n: "
 if '%reg4%' == 'n' goto reg5start
 if /i "%reg4%" neq "y" goto reg4start
@@ -151,6 +287,30 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScr
 
 :reg5start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg5="Enable Classic Control Panel view? y/n: "
 if '%reg5%' == 'n' goto reg6start
 if /i "%reg5%" neq "y" goto reg5start
@@ -158,6 +318,30 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "F
 
 :reg6start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg6="Hide indication for compressed NTFS files? y/n: "
 if '%reg6%' == 'n' goto reg7start
 if /i "%reg6%" neq "y" goto reg6start
@@ -165,6 +349,30 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "S
 
 :reg7start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg7="Disable Windows Update sharing? y/n: "
 if '%reg7%' == 'n' goto reg8start
 if /i "%reg7%" neq "y" goto reg7start
@@ -173,6 +381,30 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Con
 
 :reg8start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg8="Remove Pin to start? y/n: "
 if '%reg8%' == 'n' goto reg9start
 if /i "%reg8%" neq "y" goto reg8start
@@ -182,6 +414,30 @@ reg delete "HKEY_CLASSES_ROOT\mscfile\shellex\ContextMenuHandlers\PintoStartScre
 
 :reg9start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg9="Classic vertical icon spacing? y/n: "
 if '%reg9%' == 'n' goto reg10start
 if /i "%reg9%" neq "y" goto reg9start
@@ -189,6 +445,30 @@ reg add "HKCU\Control Panel\Desktop\WindowMetrics" /v "IconVerticalSpacing" /t R
 
 :reg10start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg10="Remove versioning tab from properties? y/n: "
 if '%reg10%' == 'n' goto reg12start
 if /i "%reg10%" neq "y" goto reg10start
@@ -196,6 +476,30 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v NoPreviousV
 
 :reg12start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg12="Remove telemetry and data collection? y/n: "
 if '%reg12%' == 'n' goto reg13start
 if /i "%reg12%" neq "y" goto reg12start
@@ -213,6 +517,30 @@ reg add "HKLM\COMPONENTS\DerivedData\Components\amd64_microsoft-windows-c..lemet
 
 :reg13start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg13="Apply Internet Explorer 11 tweaks? y/n: "
 if '%reg13%' == 'n' goto reg14start
 if /i "%reg13%" neq "y" goto reg13start
@@ -231,6 +559,30 @@ reg add "HKCU\Software\Policies\Microsoft\Internet Explorer\Main" /v "RunOnceCom
 
 :reg14start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg14="Disable Cortana, Bing Search and Searchbar? y/n: "
 if '%reg14%' == 'n' goto reg15start
 if /i "%reg14%" neq "y" goto reg14start
@@ -242,6 +594,30 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEn
 
 :reg15start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg15="Change Logon screen background with accent color? y/n: "
 if '%reg15%' == 'n' goto reg16start
 if /i "%reg15%" neq "y" goto reg15start
@@ -249,6 +625,30 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "DisableLogonBackgr
 
 :reg16start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg16="Disable Windows Error Reporting? y/n: "
 if '%reg16%' == 'n' goto reg17start
 if /i "%reg16%" neq "y" goto reg16start
@@ -256,6 +656,30 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting" /v "D
 
 :reg17start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg17="Disable automatic Windows Updates? y/n: "
 if '%reg17%' == 'n' goto reg18start
 if /i "%reg17%" neq "y" goto reg17start
@@ -263,8 +687,32 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Updat
 
 :reg18start
 cls
+echo ==========================================================
+echo ================ Mining Registry Tweaks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p reg18="Disable Hibernation? y/n: "
-if '%reg18%' == 'n' goto servstart
+if '%reg18%' == 'n' goto servstart2
 if /i "%reg18%" neq "y" goto reg18start
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "HiberbootEnabled" /t REG_DWORD /d 0 /f > NUL 2>&1
 timeout /t 2 /NOBREAK >NUL
@@ -278,6 +726,26 @@ echo ==========================================================
 echo ============ Tweaks for Services and Tasks ===============
 echo ==========================================================
 echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 :servstart
 set /p services="Apply 2nd Set of Registry tweaks for Running Services? y/n: "
 if '%services%' == 'n' goto schedstart2
@@ -285,6 +753,30 @@ if /i "%services%" equ "y" ( GOTO serv0start ) else ( GOTO schedstart2 )
 
 :serv0start
 cls
+echo ==========================================================
+echo ============ Tweaks for Services and Tasks ===============
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p serv0="Disable tracking services? y/n: "
 if '%serv0%' == 'n' goto serv1start
 if /i "%serv0%" neq "y" goto serv0start
@@ -295,6 +787,30 @@ sc config WMPNetworkSvc start= disabled > NUL 2>&1
 
 :serv1start
 cls
+echo ==========================================================
+echo ============ Tweaks for Services and Tasks ===============
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p serv1="Disable WAP Push Message Routing Service? y/n: "
 if '%serv1%' == 'n' goto serv2start
 if /i "%serv1%" neq "y" goto serv1start
@@ -302,6 +818,30 @@ sc config dmwappushservice start= disabled > NUL 2>&1
 
 :serv2start
 cls
+echo ==========================================================
+echo ============ Tweaks for Services and Tasks ===============
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p serv2="Disable Windows Search? y/n: "
 if '%serv2%' == 'n' goto serv3start
 if /i "%serv2%" neq "y" goto serv2start
@@ -310,6 +850,30 @@ del "C:\ProgramData\Microsoft\Search\Data\Applications\Windows\Windows.edb" /s >
 
 :serv3start
 cls
+echo ==========================================================
+echo ============ Tweaks for Services and Tasks ===============
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p serv3="Disable Superfetch? y/n: "
 if '%serv3%' == 'n' goto serv4start
 if /i "%serv3%" neq "y" goto serv3start
@@ -317,8 +881,32 @@ sc config SysMain start= disabled > NUL 2>&1
 
 :serv4start
 cls
+echo ==========================================================
+echo ============ Tweaks for Services and Tasks ===============
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 set /p serv4="Disable Windows Defender? y/n: "
-if '%serv4%' == 'n' goto schedstart
+if '%serv4%' == 'n' goto schedstart2
 if /i "%serv4%" neq "y" goto serv4start
 sc config WinDefend start= disabled > NUL 2>&1
 sc config WdNisSvc start= disabled > NUL 2>&1
@@ -338,13 +926,57 @@ cls
 echo ==========================================================
 echo ================ Remove Scheduled Tasks ==================
 echo ==========================================================
-ECHO.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 :schedstart
 set /p schedules="Remove Scheduled Tasks? y/n: "
 if '%schedules%' == 'n' goto winappstart2
 if /i "%schedules%" equ "y" ( GOTO schedstart0 ) else ( GOTO winappstart2 )
 :schedstart0
 cls
+echo ==========================================================
+echo ================ Remove Scheduled Tasks ==================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 schtasks /Change /TN "Microsoft\Windows\AppID\SmartScreenSpecific" /Disable > NUL 2>&1
 schtasks /Change /TN "Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /Disable > NUL 2>&1
 schtasks /Change /TN "Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /Disable > NUL 2>&1
@@ -361,13 +993,57 @@ cls
 echo ==========================================================
 echo ============== Remove Windows Default Apps ===============
 echo ==========================================================
-ECHO.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 :winappstart
 set /p winapps="Remove Windows Default Apps? y/n: "
 if '%winapps%' == 'n' goto odrivestart2
 if /i "%winapps%" equ "y" ( GOTO winappstart0 ) else ( GOTO odrivestart2 )
 :winappstart0
 cls
+echo ==========================================================
+echo ============== Remove Windows Default Apps ===============
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 powershell "Get-AppxPackage *3d* | Remove-AppxPackage" > NUL 2>&1
 powershell "Get-AppxPackage *bing* | Remove-AppxPackage" > NUL 2>&1
 powershell "Get-AppxPackage *zune* | Remove-AppxPackage" > NUL 2>&1
@@ -387,13 +1063,57 @@ cls
 echo ==========================================================
 echo ============== Disable / Remove OneDrive =================
 echo ==========================================================
-ECHO.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 :odrivestart
 set /p onedrive="Disable OneDrive? y/n: "
 if '%onedrive%' == 'n' goto hoststart2
 if /i "%onedrive%" equ "y" ( GOTO odrivestart0 ) else ( GOTO hoststart2 )
 :odrivestart0
 cls
+echo ==========================================================
+echo ============== Disable / Remove OneDrive =================
+echo ==========================================================
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 reg add "HKLM\Software\Policies\Microsoft\Windows\OneDrive" /v DisableFileSyncNGSC /t REG_DWORD /d 1 /f > NUL 2>&1
 ECHO Done...
 timeout /t 2 /NOBREAK >NUL
@@ -402,7 +1122,27 @@ cls
 echo ==========================================================
 echo ============= Blocking Telemetry Servers =================
 echo ==========================================================
-ECHO.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 :hoststart
 set /p hostsblock="Blocking Telemetry Servers (Data Reporting) ? y/n: "
 if '%hostsblock%' == 'n' goto REGTWEAK
