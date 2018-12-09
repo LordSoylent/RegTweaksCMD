@@ -94,6 +94,7 @@ GOTO REGTWEAK
 cls
 
 :START2
+cls
 echo ==========================================================
 echo ================ Mining Registry Tweaks ==================
 echo ==========================================================
@@ -110,6 +111,7 @@ pause
 GOTO REGTWEAK
 
 :START
+cls
 echo ==========================================================
 echo ================ Mining Registry Tweaks ==================
 echo ==========================================================
@@ -119,42 +121,49 @@ if '%registry%' == 'n' goto servstart2
 if /i "%registry%" equ "y" ( GOTO reg0start ) else ( GOTO servstart2 )
 
 :reg0start
+cls
 set /p reg0="Replace Utilman with CMD? (Backdoor for if Locked Out) y/n: "
 if '%reg0%' == 'n' goto reg2start
 if /i "%reg0%" neq "y" goto reg0start
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\utilman.exe" /v "Debugger" /t REG_SZ /d "cmd.exe" /f > NUL 2>&1
 
 :reg2start
+cls
 set /p reg2="Show Computer shortcut on Desktop? y/n: "
 if '%reg2%' == 'n' goto reg3start
 if /i "%reg2%" neq "y" goto reg2start
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{20D04FE0-3AEA-1069-A2D8-08002B30309D}" /t REG_DWORD /d 0 /f > NUL 2>&1
 
 :reg3start
+cls
 set /p reg3="Show File Extensions? (.txt, .jpg, etc) y/n: "
 if '%reg3%' == 'n' goto reg4start
 if /i "%reg3%" neq "y" goto reg3start
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t REG_DWORD /d 0 /f > NUL 2>&1
 
 :reg4start
+cls
 set /p reg4="Disable Windows Lockscreen? y/n: "
 if '%reg4%' == 'n' goto reg5start
 if /i "%reg4%" neq "y" goto reg4start
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScreen" /t REG_DWORD /d 1 /f > NUL 2>&1
 
 :reg5start
+cls
 set /p reg5="Enable Classic Control Panel view? y/n: "
 if '%reg5%' == 'n' goto reg6start
 if /i "%reg5%" neq "y" goto reg5start
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "ForceClassicControlPanel" /t REG_DWORD /d 1 /f > NUL 2>&1
 
 :reg6start
+cls
 set /p reg6="Hide indication for compressed NTFS files? y/n: "
 if '%reg6%' == 'n' goto reg7start
 if /i "%reg6%" neq "y" goto reg6start
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowCompColor" /t RED_DWORD /d 0 /f > NUL 2>&1
 
 :reg7start
+cls
 set /p reg7="Disable Windows Update sharing? y/n: "
 if '%reg7%' == 'n' goto reg8start
 if /i "%reg7%" neq "y" goto reg7start
@@ -162,6 +171,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Con
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config" /v "DODownloadMode" /t REG_DWORD /d 0 /f > NUL 2>&1
 
 :reg8start
+cls
 set /p reg8="Remove Pin to start? y/n: "
 if '%reg8%' == 'n' goto reg9start
 if /i "%reg8%" neq "y" goto reg8start
@@ -170,18 +180,21 @@ reg delete "HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers\PintoStartScree
 reg delete "HKEY_CLASSES_ROOT\mscfile\shellex\ContextMenuHandlers\PintoStartScreen" /f > NUL 2>&1
 
 :reg9start
+cls
 set /p reg9="Classic vertical icon spacing? y/n: "
 if '%reg9%' == 'n' goto reg10start
 if /i "%reg9%" neq "y" goto reg9start
 reg add "HKCU\Control Panel\Desktop\WindowMetrics" /v "IconVerticalSpacing" /t REG_SZ /d "-1150" /f > NUL 2>&1
 
 :reg10start
+cls
 set /p reg10="Remove versioning tab from properties? y/n: "
 if '%reg10%' == 'n' goto reg12start
 if /i "%reg10%" neq "y" goto reg10start
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v NoPreviousVersionsPage /t REG_DWORD /d 1 /f > NUL 2>&1
 
 :reg12start
+cls
 set /p reg12="Remove telemetry and data collection? y/n: "
 if '%reg12%' == 'n' goto reg13start
 if /i "%reg12%" neq "y" goto reg12start
@@ -198,6 +211,7 @@ reg add "HKLM\COMPONENTS\DerivedData\Components\amd64_microsoft-windows-c..lemet
 reg add "HKLM\COMPONENTS\DerivedData\Components\amd64_microsoft-windows-c..lemetry.lib.cortana_31bf3856ad364e35_10.0.10240.16384_none_40ba2ec3d03bceb0" /v "f!proactive-telemetry-inter_58073761d33f144b" /t REG_DWORD /d 0 /f > NUL 2>&1
 
 :reg13start
+cls
 set /p reg13="Apply Internet Explorer 11 tweaks? y/n: "
 if '%reg13%' == 'n' goto reg14start
 if /i "%reg13%" neq "y" goto reg13start
@@ -215,6 +229,7 @@ reg add "HKCU\Software\Policies\Microsoft\Internet Explorer\Main" /v "RunOnceHas
 reg add "HKCU\Software\Policies\Microsoft\Internet Explorer\Main" /v "RunOnceComplete" /t REG_DWORD /d 1 /f > NUL 2>&1
 
 :reg14start
+cls
 set /p reg14="Disable Cortana, Bing Search and Searchbar? y/n: "
 if '%reg14%' == 'n' goto reg15start
 if /i "%reg14%" neq "y" goto reg14start
@@ -225,24 +240,28 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTas
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEnabled" /t REG_DWORD /d 0 /f > NUL 2>&1
 
 :reg15start
+cls
 set /p reg15="Change Logon screen background with accent color? y/n: "
 if '%reg15%' == 'n' goto reg16start
 if /i "%reg15%" neq "y" goto reg15start
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "DisableLogonBackgroundImage" /t REG_DWORD /d 1 /f > NUL 2>&1
 
 :reg16start
+cls
 set /p reg16="Disable Windows Error Reporting? y/n: "
 if '%reg16%' == 'n' goto reg17start
 if /i "%reg16%" neq "y" goto reg16start
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d 1 /f > NUL 2>&1
 
 :reg17start
+cls
 set /p reg17="Disable automatic Windows Updates? y/n: "
 if '%reg17%' == 'n' goto reg18start
 if /i "%reg17%" neq "y" goto reg17start
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update" /v "AUOptions" /t REG_DWORD /d 2 /f > NUL 2>&1
 
 :reg18start
+cls
 set /p reg18="Disable Hibernation? y/n: "
 if '%reg18%' == 'n' goto servstart
 if /i "%reg18%" neq "y" goto reg18start
@@ -251,6 +270,7 @@ timeout /t 2 /NOBREAK >NUL
 echo Registry Set 1 Done..
 timeout /t 2 /NOBREAK >NUL
 goto servstart2
+
 :servstart2
 cls
 echo ==========================================================
@@ -263,6 +283,7 @@ if '%services%' == 'n' goto schedstart2
 if /i "%services%" equ "y" ( GOTO serv0start ) else ( GOTO schedstart2 )
 
 :serv0start
+cls
 set /p serv0="Disable tracking services? y/n: "
 if '%serv0%' == 'n' goto serv1start
 if /i "%serv0%" neq "y" goto serv0start
@@ -272,12 +293,14 @@ sc config TrkWks start= disabled > NUL 2>&1
 sc config WMPNetworkSvc start= disabled > NUL 2>&1
 
 :serv1start
+cls
 set /p serv1="Disable WAP Push Message Routing Service? y/n: "
 if '%serv1%' == 'n' goto serv2start
 if /i "%serv1%" neq "y" goto serv1start
 sc config dmwappushservice start= disabled > NUL 2>&1
 
 :serv2start
+cls
 set /p serv2="Disable Windows Search? y/n: "
 if '%serv2%' == 'n' goto serv3start
 if /i "%serv2%" neq "y" goto serv2start
@@ -285,12 +308,14 @@ sc config WSearch start= disabled > NUL 2>&1
 del "C:\ProgramData\Microsoft\Search\Data\Applications\Windows\Windows.edb" /s > NUL 2>&1
 
 :serv3start
+cls
 set /p serv3="Disable Superfetch? y/n: "
 if '%serv3%' == 'n' goto serv4start
 if /i "%serv3%" neq "y" goto serv3start
 sc config SysMain start= disabled > NUL 2>&1
 
 :serv4start
+cls
 set /p serv4="Disable Windows Defender? y/n: "
 if '%serv4%' == 'n' goto schedstart
 if /i "%serv4%" neq "y" goto serv4start
@@ -306,6 +331,7 @@ del "C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache*" /s > NUL 2>&1
 ECHO Done...
 timeout /t 2 /NOBREAK >NUL
 goto schedstart2
+
 :schedstart2
 cls
 echo ==========================================================
@@ -317,6 +343,7 @@ set /p schedules="Remove Scheduled Tasks? y/n: "
 if '%schedules%' == 'n' goto winappstart2
 if /i "%schedules%" equ "y" ( GOTO schedstart0 ) else ( GOTO winappstart2 )
 :schedstart0
+cls
 schtasks /Change /TN "Microsoft\Windows\AppID\SmartScreenSpecific" /Disable > NUL 2>&1
 schtasks /Change /TN "Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /Disable > NUL 2>&1
 schtasks /Change /TN "Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /Disable > NUL 2>&1
@@ -327,6 +354,7 @@ schtasks /Change /TN "Microsoft\Windows\NetTrace\GatherNetworkInfo" /Disable > N
 schtasks /Change /TN "Microsoft\Windows\Windows Error Reporting\QueueReporting" /Disable > NUL 2>&1
 ECHO Done...
 timeout /t 2 /NOBREAK >NUL
+
 :winappstart2
 cls
 echo ==========================================================
@@ -338,6 +366,7 @@ set /p winapps="Remove Windows Default Apps? y/n: "
 if '%winapps%' == 'n' goto odrivestart2
 if /i "%winapps%" equ "y" ( GOTO winappstart0 ) else ( GOTO odrivestart2 )
 :winappstart0
+cls
 powershell "Get-AppxPackage *3d* | Remove-AppxPackage" > NUL 2>&1
 powershell "Get-AppxPackage *bing* | Remove-AppxPackage" > NUL 2>&1
 powershell "Get-AppxPackage *zune* | Remove-AppxPackage" > NUL 2>&1
@@ -363,6 +392,7 @@ set /p onedrive="Disable OneDrive? y/n: "
 if '%onedrive%' == 'n' goto hoststart2
 if /i "%onedrive%" equ "y" ( GOTO odrivestart0 ) else ( GOTO hoststart2 )
 :odrivestart0
+cls
 reg add "HKLM\Software\Policies\Microsoft\Windows\OneDrive" /v DisableFileSyncNGSC /t REG_DWORD /d 1 /f > NUL 2>&1
 ECHO Done...
 timeout /t 2 /NOBREAK >NUL
@@ -377,6 +407,7 @@ set /p hostsblock="Blocking Telemetry Servers (Data Reporting) ? y/n: "
 if '%hostsblock%' == 'n' goto REGTWEAK
 if /i "%hostsblock%" equ "y" ( GOTO hoststart0 ) else ( GOTO REGTWEAK )
 :hoststart0
+cls
 copy "%WINDIR%\system32\drivers\etc\hosts" "%WINDIR%\system32\drivers\etc\hosts.bak" > NUL 2>&1
 attrib -r "%WINDIR%\system32\drivers\etc\hosts" > NUL 2>&1
 FIND /C /I "vortex.data.microsoft.com" %WINDIR%\system32\drivers\etc\hosts
