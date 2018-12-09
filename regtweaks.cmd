@@ -85,13 +85,12 @@ echo 0. Exit
 echo.
 echo.
 echo.
-
+set option=null
 set /p option="Select a Option[0-2] and Press ENTER to contine: "
-SET "NOT=1,2,0"
-IF "%option%" NEQ "%NOT%" GOTO REGTWEAK
-if "%option%" EQU "1" goto START
-if "%option%" EQU "2" goto START2
+if "%option%" EQU "1" GOTO START
+if "%option%" EQU "2" GOTO START2 
 if "%option%" EQU "0" GOTO EXIT
+GOTO REGTWEAK
 cls
 
 :START2
@@ -100,13 +99,11 @@ echo ================ Mining Registry Tweaks ==================
 echo ==========================================================
 ECHO.
 set /p removal="You sure you want to remove Our Registry Tweaks? y/n: "
-SET "NOT=Y, y, N, n"
-IF "%removal%" NEQ "%NOT%" GOTO START2
-if "%removal%" EQU "n" goto EXIT
-if "%removal%" EQU "N" goto EXIT
-if "%removal%" EQU "y" GOTO reg0start
-if "%removal%" EQU "Y" GOTO reg0start
-
+if "%removal%" EQU "n" goto REGTWEAK
+if "%removal%" EQU "N" goto REGTWEAK
+if "%removal%" EQU "y" GOTO rem1
+if "%removal%" EQU "Y" GOTO rem1
+GOTO START2
 :rem1
 echo Testing
 pause
@@ -432,7 +429,7 @@ FIND /C /I "vortex-sandbox.data.microsoft.com" %WINDIR%\system32\drivers\etc\hos
 IF %ERRORLEVEL% NEQ 0 ECHO ^0.0.0.0 vortex-sandbox.data.microsoft.com>>%WINDIR%\system32\drivers\etc\hosts
 attrib +r "%WINDIR%\system32\drivers\etc\hosts" > NUL 2>&1
 cls
-GOTO EXIT
+GOTO REGTWEAK
 :EXIT
 cls
 echo.
